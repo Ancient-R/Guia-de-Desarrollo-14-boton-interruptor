@@ -1,0 +1,130 @@
+body{
+    background-color: #f3f3f3;
+}
+
+.title{
+    text-align: center;
+}
+
+/* Contenedor del interruptor */
+.switch-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+/* Botón interruptor */
+.switch {
+    position: relative;
+    bottom: 20px;
+    right: 0;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    outline: none;
+}
+
+/* Ocultamos el checkbox
+ */
+.switch-input{
+    display: none;
+}
+  
+/* Cuerpo del botón*/
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9f9f9f;
+    transition: background-color .3s ease;
+}
+
+/*  Cuerpo del botón cuando está inactivo */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 31px;
+    width: 31px;
+    left: 0;
+    bottom: -5px;
+    box-shadow: 1px 1px 1px #3D3C4F;
+    transition: transform .2s ease;
+}
+
+
+/*  Background del cuerpo del botón 
+    cuando está activo */
+.switch-input:checked + .slider {
+    background-color: #8cbbe9;
+}
+
+.switch-input-two:checked + .slider{
+    background-color: #9edfac;
+}
+
+.switch-input-three:checked + .slider{
+    background-color: #fce8a8;
+}
+
+.switch-input-four:checked + .slider{
+    background-color: #fc9ba3;
+}
+
+.switch-input-five:checked + .slider{
+    background-color: #98e3f0;
+}
+
+.switch-input-six:checked + .slider{
+    background-color: #a898f0;
+}
+
+/*  botón cuando está activo*/
+.switch-input:checked + .slider::before {
+    transform: translateX(30px);
+}
+  
+  /* Redondeado del cuerpo del botón */
+.round {
+    border-radius: 34px;
+}
+  
+.round::before {
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/*  Color de la cabeza del botón cuando está activo */
+.switch-input:checked + .round::before{
+    background-color: #1976d2;
+}
+
+
+.switch-input-two:checked + .round::before{
+    background-color: #28a745;
+}
+
+.switch-input-three:checked + .round::before{
+    background-color: #ffc107;
+}
+
+.switch-input-four:checked + .round::before{
+    background-color: #dc3545;
+}
+
+.switch-input-five:checked + .round::before{
+    background-color: #17a2b8;
+}
+
+.switch-input-six:checked + .round::before{
+    background-color: #4217b8;
+}
